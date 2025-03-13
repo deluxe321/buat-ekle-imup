@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Her Out</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe4e1;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 150px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #FF6347;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://media.tenor.com/l6TfN5pkcRsAAAAi/sanrio-characters.gif" alt="Cute Character"> <!-- Ganti dengan link gif asli -->
+        <h2>HAII EKLE IMUT 😍</h2>
+        <p>Will you be my Valentine?</p>
+        <div class="buttons">
+            <button class="yes" onclick="sayYes()">Yes</button>
+            <button class="no" id="noButton">No</button>
+        </div>
+    </div>
+    
+    <script>
+        function sayYes() {
+            alert("Yay! 🎉 Can't wait for our date!");
+        }
+        
+        document.getElementById('noButton').addEventListener('mouseover', function() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            this.style.left = x + 'px';
+            this.style.top = y + 'px';
+        });
+    </script>
+</body>
+</html>
